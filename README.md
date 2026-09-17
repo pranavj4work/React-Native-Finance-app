@@ -1,8 +1,6 @@
 # Finora
 
-Interview-ready personal finance app for React Native. Track income and expenses, set category budgets, and read monthly reports — all stored locally with SQLite.
-
-Built to show the skills Bangalore hiring managers look for: TypeScript, navigation, forms, local persistence, clean architecture, and UI polish.
+Personal finance app built using React Native & TypeScript. Track income and expenses, set category budgets, and read monthly reports — all stored locally with SQLite.
 
 ## Run it
 
@@ -43,22 +41,6 @@ src/
   navigation/     typed stack + tabs
 ```
 
-Mutations always write SQLite first, then update Zustand. That keeps the UI reactive without a second source of truth.
-
 **Stack:** Expo 54, TypeScript, React Navigation, Zustand, expo-sqlite, React Hook Form + Zod, dayjs, Gifted Charts.
 
-## Interview talking points
 
-- Why SQLite over AsyncStorage for relational money data
-- Write-through cache vs keeping two stores in sync
-- Form validation with Zod instead of ad-hoc `if` checks
-- Recurring engine walks `nextRunDate` on launch / pull-to-refresh
-- Theme tokens drive both custom UI and React Navigation
-
-## Not in this version
-
-Auth, cloud sync, receipt OCR, bank linking, multi-wallet. Amounts are stored as JS numbers; a production app would use integer minor units.
-
-## Demo path
-
-Onboarding → demo data → Home budget banner → add an expense over a limit → swipe-delete → Reports month switch → Settings dark mode → Export CSV.
